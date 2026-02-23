@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel vs Capcom - Selección de Personajes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+
+    <header class="top-bar">
+        <div class="logo">
+            <span class="logo-marvel">Marvel</span>
+            <span class="logo-vs">VS</span>
+            <span class="logo-capcom">Capcom</span>
+        </div>
+        <div class="subtitle">Selecciona tus luchadores favoritos</div>
+    </header>
+
+    <main class="layout">
+        <section class="panel panel-left">
+            <h2 class="panel-title">Equipo Marvel</h2>
+            <div class="selected-slot selected-slot-left">
+                <span class="slot-label">
+                    Selección (<span id="count-marvel">0</span>/3)
+                </span>
+                <div id="team-marvel" class="team-row"></div>
+                <div class="slot-empty-text" data-empty="marvel">Elegí 3 personajes Marvel</div>
+            </div>
+        </section>
+
+        <section class="characters-panel">
+            <div class="characters-header">
+                <h1 class="main-title">Elige tu personaje</h1>
+                <p class="main-description">
+                    Interfaz de ejemplo solo con HTML y CSS. Más adelante puedes conectar aquí tu lógica en JavaScript
+                    para manejar los clics y las selecciones.
+                </p>
+            </div>
+
+            <div class="filters">
+                <button class="chip chip-active">Todos</button>
+                <button class="chip chip-marvel">Marvel</button>
+                <button class="chip chip-capcom">Capcom</button>
+            </div>
+
+            <div class="characters-grid">
+                <article class="character-card marvel">
+                    <div class="character-tag">Marvel</div>
+                    <div class="character-image placeholder-ironman"></div>
+                    <h3 class="character-name">Iron Man</h3>
+                    <p class="character-desc">Armadura de alta tecnología y ataques a distancia.</p>
+                </article>
+
+                <article class="character-card marvel">
+                    <div class="character-tag">Marvel</div>
+                    <div class="character-image placeholder-thor"></div>
+                    <h3 class="character-name">Thor</h3>
+                    <p class="character-desc">Hijo de Odin, Dios del Trueno y protector de Asgard.</p>
+                </article>
+                
+                <article class="character-card marvel">
+                    <div class="character-tag">Marvel</div>
+                    <div class="character-image placeholder-spiderman"></div>
+                    <h3 class="character-name">Spider‑Man</h3>
+                    <p class="character-desc">Movilidad extrema y combos aéreos rápidos.</p>
+                </article>
+
+                <article class="character-card capcom">
+                    <div class="character-tag">Capcom</div>
+                    <div class="character-image placeholder-ryu"></div>
+                    <h3 class="character-name">Ryu</h3>
+                    <p class="character-desc">Luchador equilibrado, ideal para todo tipo de jugadores.</p>
+                </article>
+
+                <article class="character-card capcom">
+                    <div class="character-tag">Capcom</div>
+                    <div class="character-image placeholder-chunli"></div>
+                    <h3 class="character-name">Chun‑Li</h3>
+                    <p class="character-desc">Patadas veloces y presión constante en el combate.</p>
+                </article>
+
+                <article class="character-card marvel">
+                    <div class="character-tag">Marvel</div>
+                    <div class="character-image placeholder-captain"></div>
+                    <h3 class="character-name">Captain America</h3>
+                    <p class="character-desc">Defensa sólida y ataques con escudo de largo alcance.</p>
+                </article>
+
+                <article class="character-card capcom">
+                    <div class="character-tag">Capcom</div>
+                    <div class="character-image placeholder-megaman"></div>
+                    <h3 class="character-name">Mega Man</h3>
+                    <p class="character-desc">Disparos cargados y control del espacio en pantalla.</p>
+                </article>
+
+                <article class="character-card capcom">
+                    <div class="character-tag">Capcom</div>
+                    <div class="character-image placeholder-leon"></div>
+                    <h3 class="character-name">Leon Kennedy</h3>
+                    <p class="character-desc">Luchador de la serie Resident Evil, conocido por su habilidad para usar armas y su resistencia.</p>
+                </article>
+            </div>
+
+            <div class="hint">
+                Esta grilla es solo visual. Tu archivo `script.js` podrá leer estos elementos,
+                escuchar clics y actualizar las selecciones de cada jugador.
+            </div>
+        </section>
+
+        <section class="panel panel-right">
+            <h2 class="panel-title">Equipo Capcom</h2>
+            <div class="selected-slot selected-slot-right">
+                <span class="slot-label">
+                    Selección (<span id="count-capcom">0</span>/3)
+                </span>
+                <div id="team-capcom" class="team-row"></div>
+                <div class="slot-empty-text" data-empty="capcom">Elegí 3 personajes Capcom</div>
+            </div>
+        </section>
+    </main>
+
+    <div class="start-bar" id="start-bar" aria-hidden="true">
+        <button class="start-btn" id="btn-empezar" type="button" disabled>Empezar</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
